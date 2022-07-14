@@ -1,0 +1,355 @@
+@import './root';
+
+@media screen and (max-width: 1038px) {
+    #mainSlider {
+        & .swiper-slide {
+            & .content {
+                text-align: center;
+                width: 80%;
+                padding-left: 0;
+            }
+        }
+    }
+
+    #tarzanBanner,
+    #lionKingBanner {
+        & .banner_content {
+            & .content_body {
+                max-width: 80%;
+            }
+        }
+    }
+
+    #main {
+        & .card_container {
+            & .cards {
+                width: auto;
+            }
+        }
+    }
+
+    #navbar #btn_menu {
+        margin-left: 0;
+
+        & .btn_menu .sidebar_content {
+            left: 20px;
+        }
+    }
+
+    #moviesDetails {
+        & .moviesContent {
+            & .moviesBottomContent {
+                & .left {
+                    width: 40%;
+                }
+
+                & .right {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #navbar {
+        width: 0;
+        padding: 0;
+
+        & .navbar_logo {
+            display: none;
+        }
+
+        & #toplogocontainer {
+            position: fixed;
+            z-index: 99995;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        & #btn_menu {
+            & .btn_menu {
+                left: 0;
+                bottom: 0;
+                width: 50px;
+                height: 45px;
+                background: $border_color;
+
+                & .btn-menu-trigger {
+                    position: fixed;
+                    z-index: 99888;
+                    left: 0px;
+                    bottom: 0px;
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+
+    .main_container {
+        margin-left: 0;
+    }
+
+    #mainSlider {
+        & .swiper-button-prev {
+            left: 10px;
+        }
+    }
+
+    #tarzanBanner,
+    #lionKingBanner {
+        & .banner_content {
+            & .content_body {
+
+                & .card-description {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #contact {
+        & .contact_content {
+            & .contact_Section {
+                & .info {
+                    & .description {
+                        & h5 {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 756px) {
+
+
+    #navbar #btn_menu {
+        &.active {
+            border-left-width: 300px;
+        }
+
+        & .btn_menu {
+            & .sidebar_content {
+                & li.links {
+                    & a {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #mainSlider {
+        & .swiper-slide {
+            & .content {
+                & a .title {
+                    font-size: 2.5em;
+                }
+
+                & .caption {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #threeHunderedBanner,
+    #tarzanBanner,
+    #lionKingBanner {
+        background-position: center;
+
+        & .banner_content {
+            & .content_body {
+                top: 60%;
+
+                & h1 {
+                    font-size: 2rem;
+                }
+
+
+                & p.card-description {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #oscarReward {
+        & .container {
+            padding-left: 0;
+            padding-right: 0;
+
+            & h3 a {
+                font-size: 1.5rem;
+            }
+
+            & p {
+                font-size: 0.9rem;
+            }
+
+            & .author span {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    #contact {
+        & .contact_content {
+            & .contact_Section {
+                & .info {
+                    max-width: 100%;
+                    text-align: left;
+
+                    & .description {
+                        & h5 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #main {
+        & .card_container {
+            & .cards {
+                height: 240px !important;
+            }
+        }
+    }
+
+    #moviesDetails {
+        & .banner {
+            background-attachment: inherit !important;
+        }
+
+        & .moviesContent {
+            & .moviesBottomContent {
+                & .left {
+                    width: 100%;
+                }
+
+                & .right {
+                    width: 100%;
+                }
+
+                & .one,
+                & .two,
+                & .three {
+                    flex-direction: column;
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #mainSlider {
+        & .swiper-button-white {
+            top: 45%;
+            padding: 20px;
+
+            &:after {
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }
+
+        & .swiper-slide {
+            & .content {
+                & a .title {
+                    font-size: 2em;
+                }
+
+                & .caption {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    #oscarReward {
+        & .container {
+
+            & h3 a {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    #threeHunderedBanner,
+    #tarzanBanner,
+    #lionKingBanner {
+
+        &:after {
+            background: rgba(14, 17, 17, 0.4);
+        }
+
+        & .banner_content {
+            & .content_body {
+                max-width: 100%;
+                padding-left: 10px;
+
+                & h1 {
+                    font-size: 1.6rem;
+                }
+
+                & h6 {
+                    font-size: 0.9rem;
+                }
+
+                & p.card-description {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    #movies {
+        & .banner_filter {
+            background-position: right;
+        }
+    }
+
+    #contact {
+        & .contact_content {
+            & .contact_Section {
+                & .info {
+                    max-width: 100%;
+                    text-align: left;
+
+                    & .description {
+                        & h5 {
+                            font-size: 1.3rem;
+                        }
+
+                        & p {
+                            font-size: 15px;
+                        }
+                    }
+
+                    & .icon {
+                        & i {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #lionkingVideoPlayer {
+        & .popupContent {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

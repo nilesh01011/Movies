@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movies</title>
+    <meta name="description" content="Movie Sites">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/logo.png" type="image/jpg">
+    <!-- =============Link Swiper's CSS============ -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- -----------------Style Links--------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- ----------------Font Family---------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="movies" class="container-fluid px-0">
+        <nav id="navbar" class="navbar fixed-left navbar-light navbar-white">
+            <a href="index.html">
+                <div id="toplogocontainer">
+                    <span>M</span>
+                </div>
+            </a>
+
+            <!-- =====Logos End==== -->
+            <div class="navbar_logo">
+                <a href="#">Movie</a>
+            </div>
+
+            <!-- =====Logos Name End==== -->
+
+            <div id="btn_menu">
+                <div class="btn_menu">
+                    <button class="btn-menu-trigger">
+                        <span></span>
+                    </button>
+
+                    <ul class="sidebar_content">
+                        <li>
+                            <div class="search">
+                                <div class="searchIcons">
+                                    <form action="#" autocomplete="off" role="search">
+                                        <input class="searching" type="text" placeholder="Search In Movies ...">
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="links">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="links active">
+                            <a href="movies.html">Movies</a>
+                        </li>
+                        <li class="links">
+                            <a href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar End -->
+
+        <div class="main_container">
+
+            <div class="banner_filter"></div>
+
+            <!-- =====Banner Filter End====== -->
+
+            <div class="movies_contain">
+
+                <h2 class="title">Movies</h2>
+
+                <!-- ======title end====== -->
+
+                <header id="filterHeader">
+                    <div id="HeaderSwiper" class="swiper">
+                        <div id="tabs" class="swiper-wrapper">
+                            <div class="swiper-slide btn active" onclick="filterSelection('movies')">
+                                <i class="fas fa-home"></i> All movies
+                            </div>
+                            <div onclick="filterSelection('action')" class="btn swiper-slide">
+                                <i class="fas fa-desktop"></i>
+                                Actions
+                            </div>
+                            <div class="btn swiper-slide" onclick="filterSelection('adventure')">
+                                <i class="fab fa-evernote"></i>
+                                Adventure
+                            </div>
+                            <div class="btn swiper-slide" onclick="filterSelection('drama')">
+                                <i class="fas fa-tshirt"></i> Drama
+                            </div>
+
+                            <div class="btn swiper-slide" onclick="filterSelection('family')">
+                                <i class="fas fa-baby"></i> Family
+                            </div>
+
+                            <div class="btn swiper-slide" onclick="filterSelection('comedy')">
+                                <i class="fas fa-mobile-alt"></i> Comedy
+                            </div>
+                            <div class="btn swiper-slide" onclick="filterSelection('crime')">
+                                <i class="fas fa-couch"></i> Crime
+                            </div>
+                            <div class="btn swiper-slide" onclick="filterSelection('history')">
+                                <i class="fas fa-mortar-pestle"></i>
+                                History
+                            </div>
+                            <div class="btn swiper-slide" onclick="filterSelection('fantasy')">
+                                <i class="fab fa-playstation"></i> Fantasy
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- header Filter buttons End -->
+
+                <div id="main" class="pages">
+                    <div class="page movies is-active container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+                            <div id="lionking" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/1.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Drama,</span> <span>History</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Lion King - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- lion kings end -->
+
+                            <div id="tarzan" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/2.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Action,</span> <span>Adventure</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Legend of Tarzan - 2016</h4>
+                                </div>
+                            </div>
+
+                            <!-- legends of tarzan end -->
+
+                            <div id="alladin" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/3.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Adventure,</span>
+                                            <span>Family,</span>
+                                            <span>Fantasy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Aladdin - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Alladdin End -->
+
+                            <div id="greenland" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/4.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.4
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Greenland - 2020</h4>
+                                </div>
+                            </div>
+
+                            <!-- Greenland end -->
+
+                            <div id="tenet" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/5.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Tenet - 2020</h4>
+                                </div>
+                            </div>
+
+                            <!-- Tenet End -->
+
+                            <div id="gentelmen" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/6.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.8
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Comedy,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Gentelmen - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Gentelmen End -->
+
+                            <div id="threehundered" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/7.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.6
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>300 - 2006</h4>
+                                </div>
+                            </div>
+
+                            <!-- 300 End -->
+
+                            <div id="vikings" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/8.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Vikings - 2013</h4>
+                                </div>
+                            </div>
+
+                            <!-- Vikings End -->
+
+                            <div id="got" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/9.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 9.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Game of Thrones - 2011</h4>
+                                </div>
+                            </div>
+
+                            <!-- Game of thrones End -->
+
+                            <div id="troy" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/10.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>History,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Troy - 2004</h4>
+                                </div>
+                            </div>
+
+                            <!-- Troy End -->
+
+                            <div id="jumanji" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/11.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Comedy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Jumanji - 2017</h4>
+                                </div>
+                            </div>
+
+                            <!-- Jumanji End -->
+
+                            <div id="moneyheist" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/12.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Money Heist - 2017</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page action container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+
+                            <div id="tarzan" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/2.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Action,</span> <span>Adventure</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Legend of Tarzan - 2016</h4>
+                                </div>
+                            </div>
+
+                            <!-- Tarzan End -->
+
+                            <div id="greenland" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/4.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.4
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Greenland - 2020</h4>
+                                </div>
+                            </div>
+
+                            <!-- Greenland end -->
+
+                            <div id="tenet" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/5.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Tenet - 2020</h4>
+                                </div>
+                            </div>
+
+                            <!-- Tenet End -->
+
+                            <div id="gentelmen" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/6.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.8
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Comedy,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Gentelmen - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Gentelmen End -->
+
+                            <div id="threehundered" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/7.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.6
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>300 - 2006</h4>
+                                </div>
+                            </div>
+
+                            <!-- 300 End -->
+
+                            <div id="vikings" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/8.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Vikings - 2013</h4>
+                                </div>
+                            </div>
+
+                            <!-- Vikings End -->
+
+                            <div id="got" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/9.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 9.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Game of Thrones - 2011</h4>
+                                </div>
+                            </div>
+
+                            <!-- Game of thrones End -->
+
+                            <div id="jumanji" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/11.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Comedy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Jumanji - 2017</h4>
+                                </div>
+                            </div>
+
+                            <!-- Jumanji End -->
+
+                            <div id="moneyheist" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/12.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Money Heist - 2017</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page adventure container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+
+                            <div class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/2.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Action,</span> <span>Adventure</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Legend of Tarzan - 2016</h4>
+                                </div>
+                            </div>
+
+                            <!-- legends of tarzan end -->
+
+                            <div id="alladin" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/3.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Adventure,</span>
+                                            <span>Family,</span>
+                                            <span>Fantasy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Aladdin - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Alladdin End -->
+
+                            <div id="vikings" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/8.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Vikings - 2013</h4>
+                                </div>
+                            </div>
+
+                            <!-- Vikings End -->
+
+                            <div id="got" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/9.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 9.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Game of Thrones - 2011</h4>
+                                </div>
+                            </div>
+
+                            <!-- Game of thrones End -->
+
+                            <div id="jumanji" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/11.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Comedy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Jumanji - 2017</h4>
+                                </div>
+                            </div>
+
+                            <!-- Jumanji End -->
+                        </div>
+                    </div>
+                    <div class="page drama container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+
+                            <div id="lionking" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/1.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Drama,</span> <span>History</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Lion King - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- lion kings end -->
+
+                            <div id="greenland" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/4.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.4
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Greenland - 2020</h4>
+                                </div>
+                            </div>
+
+                            <!-- Greenland end -->
+
+                            <div id="vikings" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/8.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.5
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Vikings - 2013</h4>
+                                </div>
+                            </div>
+
+                            <!-- Vikings End -->
+
+                            <div id="got" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/9.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 9.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Game of Thrones - 2011</h4>
+                                </div>
+                            </div>
+
+                            <!-- Game of thrones End -->
+
+                            <div id="troy" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/10.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>History,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Troy - 2004</h4>
+                                </div>
+                            </div>
+
+                            <!-- Troy End -->
+                        </div>
+                    </div>
+                    <div class="page family container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+                            <div id="alladin" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/3.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Adventure,</span>
+                                            <span>Family,</span>
+                                            <span>Fantasy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Aladdin - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Alladdin End -->
+                        </div>
+                    </div>
+                    <div class="page comedy container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+                            <div id="gentelmen" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/6.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.8
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Comedy,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Gentelmen - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Gentelmen End -->
+
+                            <div id="jumanji" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/11.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Adventure,</span>
+                                            <span>Comedy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Jumanji - 2017</h4>
+                                </div>
+                            </div>
+
+                            <!-- Jumanji End -->
+                        </div>
+                    </div>
+                    <div class="page crime container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+
+                            <div id="gentelmen" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/6.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.8
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Comedy,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Gentelmen - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Gentelmen End -->
+
+                            <div id="moneyheist" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/12.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 8.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Action,</span>
+                                            <span>Crime</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Money Heist - 2017</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page history container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+
+                            <div id="lionking" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/1.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.9
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p><span>Drama,</span> <span>History</span></p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>The Lion King - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- lion kings end -->
+
+                            <div id="troy" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/10.jpeg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 7.3
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>History,</span>
+                                            <span>Drama</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Troy - 2004</h4>
+                                </div>
+                            </div>
+
+                            <!-- Troy End -->
+                        </div>
+                    </div>
+                    <div class="page fantasy container-fluid px-0">
+                        <div class="card_container row justify-content-xl-start justify-content-center m-0">
+                            <div id="alladin" class="cards col-xl-3 col-lg-4 col-sm-5 col-12 px-0">
+                                <div class="cards_body">
+                                    <div class="cards_image">
+                                        <img src="./img/3.jpg" alt="card-images">
+                                    </div>
+                                    <div class="cards_content">
+                                        <h2>
+                                            <span>IMDB</span> 6.2
+                                        </h2>
+                                    </div>
+
+                                    <div class="cards_shows">
+                                        <p>
+                                            <span>Adventure,</span>
+                                            <span>Family,</span>
+                                            <span>Fantasy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="cards_title">
+                                    <h4>Aladdin - 2019</h4>
+                                </div>
+                            </div>
+
+                            <!-- Alladdin End -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages content End -->
+            </div>
+
+            <!-- ===========movies Content End========== -->
+
+            <footer class="main_footer">
+                <div class="copyright pt-4" id="copyright">© 2022 Movie</div>
+            </footer>
+        </div>
+
+
+    </div>
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-- ================Scripts JS============== -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./JS/SwiperMain.js" async defer></script>
+    <script src="./JS/main.js" async defer></script>
+    <script src="./JS/filterMenu.js" async defer></script>
+</body>
+
+</html>

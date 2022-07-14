@@ -1,0 +1,1468 @@
+#main .page .card_container .cards .cards_body .cards_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#oscarReward .container, #oscarReward, #threeHunderedBanner .banner_content,
+#tarzanBanner .banner_content,
+#lionKingBanner .banner_content {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e1111;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif !important;
+  color: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.main_container {
+  margin-left: 100px;
+}
+
+#overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  top: 0;
+  position: fixed;
+  transform: translateX(100%);
+  z-index: 95;
+}
+#overlay.active {
+  transform: translateX(0%);
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99998;
+  transition: top 0.3s;
+  height: 100%;
+  width: 100px;
+  background-color: #0e1111;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#navbar .navbar_logo {
+  width: 100%;
+  position: absolute;
+  left: calc(50% - 30px);
+}
+#navbar .navbar_logo a {
+  color: #fff;
+  font-weight: 500;
+  transform: rotate(-90deg);
+  font-size: 1.25rem;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  line-height: inherit;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#navbar #toplogocontainer {
+  position: fixed;
+  z-index: 99995;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-width: 0px;
+  border-color: #0e1111;
+  background-color: #f01452;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+#navbar #toplogocontainer span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  font-weight: 700;
+}
+#navbar #btn_menu {
+  position: fixed;
+  z-index: 98885;
+  top: 0;
+  left: 0;
+  height: 0;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #0e1111;
+  background-color: rgba(0, 0, 0, 0);
+  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  margin-left: 100px;
+}
+#navbar #btn_menu .btn_menu {
+  position: fixed;
+  z-index: 99888;
+  background: transparent;
+  height: 45px;
+  left: 20px;
+  bottom: 18px;
+  width: 60px;
+  border-radius: 0px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger {
+  position: fixed;
+  z-index: 99880;
+  bottom: 15px;
+  left: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger:focus {
+  box-shadow: none;
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 80%;
+  height: 4px;
+  margin-top: -2px;
+  background-color: transparent;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger span:after, #navbar #btn_menu .btn_menu .btn-menu-trigger span:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: transform 0.3s;
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger span:before {
+  transform: translateY(-250%);
+}
+#navbar #btn_menu .btn_menu .btn-menu-trigger span:after {
+  transform: translateY(250%);
+}
+#navbar #btn_menu .btn_menu .sidebar_content {
+  position: fixed;
+  z-index: 100;
+  top: 100px;
+  left: 120px;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  list-style: none;
+  backface-visibility: hidden;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  opacity: 0;
+  visibility: hidden;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li {
+  padding: 10px 0;
+  display: block;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links a {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Ubuntu", sans-serif;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  position: relative;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40%;
+  height: 5px;
+  background: #f01452;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links a:hover {
+  color: #888;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links a:hover::after {
+  opacity: 1;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links.active a {
+  color: #888;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li.links.active a:after {
+  opacity: 1;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search {
+  margin-bottom: 1.5rem;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form {
+  display: flex;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form .searching {
+  color: #fff;
+  font-size: 14px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border: solid 3px #fff;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form .searching::placeholder {
+  opacity: 0;
+  color: #fff;
+  font-weight: 500;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form.activeSearch {
+  width: 250px;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form.activeSearch .searching {
+  width: 100%;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form.activeSearch .searching::placeholder {
+  opacity: 1;
+}
+#navbar #btn_menu .btn_menu .sidebar_content li .search .searchIcons form:after {
+  content: "";
+  background: #fff;
+  width: 4px;
+  height: 13px;
+  position: absolute;
+  top: 29px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+#navbar #btn_menu.active {
+  height: 100%;
+  border-width: 0px 0px 0px 350px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: border-width 0.3s, background-color 0.3s;
+}
+#navbar #btn_menu.active .btn_menu .btn-menu-trigger span:after {
+  transform: rotate(45deg);
+}
+#navbar #btn_menu.active .btn_menu .btn-menu-trigger span:before {
+  transform: rotate(-45deg);
+  opacity: 0.6;
+}
+#navbar #btn_menu.active .btn_menu .sidebar_content {
+  transition: 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  opacity: 1;
+  visibility: visible;
+}
+
+#banner {
+  height: 100%;
+  width: 100%;
+}
+
+#mainSlider {
+  overflow: hidden;
+  height: 100vh;
+}
+#mainSlider .swiper-slide {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+#mainSlider .swiper-slide figure.slide-bgimg {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 0ms ease 0s;
+}
+#mainSlider .swiper-slide figure.slide-bgimg:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(14, 17, 17, 0.4);
+  border-radius: 0.25rem;
+}
+#mainSlider .swiper-slide .content {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 50%;
+  padding-left: 5%;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+#mainSlider .swiper-slide .content .title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+}
+#mainSlider .swiper-slide .content .caption {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+#mainSlider .swiper-pagination1 span {
+  background: #f01452;
+}
+#mainSlider .swiper-button-white {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 30px;
+  color: #fff;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  opacity: 0;
+  visibility: hidden;
+}
+#mainSlider .swiper-button-white:after {
+  font-size: 2rem;
+  font-weight: 800;
+}
+#mainSlider .swiper-button-prev {
+  left: 110px;
+  transform: translateX(60px);
+}
+#mainSlider .swiper-button-next {
+  transform: translateX(-60px);
+}
+#mainSlider:hover .swiper-button-prev, #mainSlider:hover .swiper-button-next {
+  transform: translateX(0px);
+  opacity: 1;
+  visibility: visible;
+}
+
+#popular_movies {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  background: #131822;
+}
+#popular_movies .title {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+#popular_movies .container-fluid {
+  width: 100%;
+  height: 100%;
+}
+#popular_movies #swiper1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#popular_movies #swiper1 .swiper-wrapper {
+  width: 100%;
+  height: 280px;
+}
+#popular_movies #swiper1 .swiper-wrapper .swiper-slide {
+  width: 257px;
+  height: max-content;
+  user-select: none;
+}
+#popular_movies #swiper1 .swiper-wrapper .swiper-slide img {
+  height: 170px;
+  width: 100%;
+}
+#popular_movies #swiper1 .swiper-wrapper .swiper-slide h4 small {
+  font-size: 60%;
+  font-weight: 400;
+}
+#popular_movies #swiper1 .swiper-pagination2 .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #7ba8bd;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  z-index: 10;
+}
+#popular_movies #swiper1 .swiper-pagination2 .swiper-pagination-bullet-active {
+  background: #f01452;
+}
+#popular_movies #swiper1 .swiper-button-next {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  right: -50px;
+}
+#popular_movies #swiper1 .swiper-button-prev {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  left: -50px;
+}
+#popular_movies #swiper1 .swiper-button-next, #popular_movies #swiper1 .swiper-button-prev {
+  top: 30%;
+  background: #f01452;
+  color: #fff;
+  padding: 12px;
+  width: 30px;
+  height: 70px;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#popular_movies #swiper1 .swiper-button-next:after, #popular_movies #swiper1 .swiper-button-prev:after {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+#popular_movies #swiper1 .swiper-button-next:hover, #popular_movies #swiper1 .swiper-button-prev:hover {
+  width: 50px;
+  transition: width 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#popular_movies #swiper1:hover .swiper-button-prev {
+  left: 0;
+}
+#popular_movies #swiper1:hover .swiper-button-next {
+  right: 0;
+}
+#popular_movies #swiper1:hover .swiper-button-prev, #popular_movies #swiper1:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 20, 82, 0.8);
+    -webkit-box-shadow: 0 0 0 0 rgba(240, 20, 82, 0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(224, 201, 207, 0);
+    -webkit-box-shadow: 0 0 0 12px rgba(224, 201, 207, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes mv-play-eff {
+  100% {
+    top: -14px;
+    right: -14px;
+    bottom: -14px;
+    left: -14px;
+    opacity: 0;
+  }
+}
+#threeHunderedBanner,
+#tarzanBanner,
+#lionKingBanner {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+#threeHunderedBanner:after,
+#tarzanBanner:after,
+#lionKingBanner:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background: linear-gradient(80deg, #0e1111 0%, rgba(14, 17, 17, 0) 65%);
+}
+#threeHunderedBanner .banner_content .content_body,
+#tarzanBanner .banner_content .content_body,
+#lionKingBanner .banner_content .content_body {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 370px;
+  max-width: 40%;
+  padding: 60px 20px;
+}
+#threeHunderedBanner .banner_content .content_body h1, #threeHunderedBanner .banner_content .content_body h6,
+#tarzanBanner .banner_content .content_body h1,
+#tarzanBanner .banner_content .content_body h6,
+#lionKingBanner .banner_content .content_body h1,
+#lionKingBanner .banner_content .content_body h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+}
+#threeHunderedBanner .banner_content .content_body h1,
+#tarzanBanner .banner_content .content_body h1,
+#lionKingBanner .banner_content .content_body h1 {
+  font-size: 2.5rem;
+}
+#threeHunderedBanner .banner_content .content_body a.playBtn,
+#tarzanBanner .banner_content .content_body a.playBtn,
+#lionKingBanner .banner_content .content_body a.playBtn {
+  color: #fff;
+  background-color: #f01452;
+  border-color: #f01452;
+  padding: 0.575rem;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  animation: pulse 2s infinite;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  margin-top: 2rem;
+  position: relative;
+}
+#threeHunderedBanner .banner_content .content_body a.playBtn:focus,
+#tarzanBanner .banner_content .content_body a.playBtn:focus,
+#lionKingBanner .banner_content .content_body a.playBtn:focus {
+  box-shadow: none;
+}
+#threeHunderedBanner .banner_content .content_body a.playBtn img,
+#tarzanBanner .banner_content .content_body a.playBtn img,
+#lionKingBanner .banner_content .content_body a.playBtn img {
+  width: 30px;
+  height: 100%;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+#threeHunderedBanner .banner_content .content_body a.playBtn:before,
+#tarzanBanner .banner_content .content_body a.playBtn:before,
+#lionKingBanner .banner_content .content_body a.playBtn:before {
+  content: "";
+  position: absolute;
+  border: #f01452 solid 8px;
+  border-radius: 0.25rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: mv-play-eff 2s infinite;
+}
+#threeHunderedBanner .banner_content .content_body a.playBtn:hover:before, #threeHunderedBanner .banner_content .content_body a.playBtn:focus:before, #threeHunderedBanner .banner_content .content_body a.playBtn:active:before,
+#tarzanBanner .banner_content .content_body a.playBtn:hover:before,
+#tarzanBanner .banner_content .content_body a.playBtn:focus:before,
+#tarzanBanner .banner_content .content_body a.playBtn:active:before,
+#lionKingBanner .banner_content .content_body a.playBtn:hover:before,
+#lionKingBanner .banner_content .content_body a.playBtn:focus:before,
+#lionKingBanner .banner_content .content_body a.playBtn:active:before {
+  animation: mv-play-eff 2s infinite;
+}
+#threeHunderedBanner .banner_content .content_body p.card-description,
+#tarzanBanner .banner_content .content_body p.card-description,
+#lionKingBanner .banner_content .content_body p.card-description {
+  font-family: "Inconsolata", monospace;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+#lionKingBanner {
+  background: url("../img/1.jpeg") no-repeat fixed;
+  background-size: cover;
+}
+
+#tarzanBanner {
+  background: url("../img/2.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+#threeHunderedBanner {
+  background: url("../img/7.jpeg") no-repeat center fixed;
+  background-size: cover;
+}
+
+#oscarReward {
+  background: #0e1111;
+  padding: 60px 20px;
+}
+#oscarReward .container {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Ubuntu", sans-serif !important;
+}
+#oscarReward .container h3 a {
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #fff;
+  transition: color 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  text-align: center;
+  display: block;
+}
+#oscarReward .container h3 a:hover {
+  color: #f01452;
+}
+#oscarReward .container p {
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  color: #fff;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+#oscarReward .container .author span a {
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#oscarReward .container .author span a:hover {
+  color: #f01452;
+}
+
+#copyright {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-family: "Inconsolata", monospace;
+  background: #0e1111;
+}
+
+#movies .main_container {
+  height: 100%;
+}
+#movies .banner_filter {
+  width: 100%;
+  height: 350px;
+  background: url("../img/3.jpg") no-repeat center bottom fixed;
+  background-size: cover;
+}
+#movies .movies_contain {
+  width: 100%;
+  height: 100%;
+  background: #0e1111;
+  display: block;
+  padding: 3rem 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+#movies .movies_contain h2.title {
+  font-weight: 600;
+  position: relative;
+  width: fit-content;
+}
+#movies .movies_contain h2.title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40%;
+  height: 5px;
+  background: #f01452;
+  border-radius: 5px;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+#filterHeader {
+  width: 100%;
+  margin: 2rem 0;
+}
+#filterHeader #HeaderSwiper {
+  width: 100%;
+  height: 100%;
+}
+#filterHeader #HeaderSwiper #tabs .btn {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid #f01452;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#filterHeader #HeaderSwiper #tabs .btn.active {
+  color: #fff;
+  background: #f01452;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#main .page {
+  display: none;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  color: #fff;
+}
+#main .page .card_container {
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+#main .page .card_container .cards {
+  height: 300px;
+  width: 350px;
+  overflow: hidden;
+}
+#main .page .card_container .cards .cards_body {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#main .page .card_container .cards .cards_body:hover::before {
+  opacity: 0.4;
+}
+#main .page .card_container .cards .cards_body:hover .cards_image img {
+  transform: translate3d(0, 0, 0) scale(1);
+  width: calc(100% + 60px);
+}
+#main .page .card_container .cards .cards_body:hover .cards_shows {
+  left: 20px;
+}
+#main .page .card_container .cards .cards_body:hover .cards_shows p {
+  opacity: 1;
+}
+#main .page .card_container .cards .cards_body::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: #2e5d5a;
+  border-radius: 7px;
+  opacity: 0;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#main .page .card_container .cards .cards_body::after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(14, 17, 17, 0.4);
+  border-radius: 7px;
+}
+#main .page .card_container .cards .cards_body .cards_image {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+}
+#main .page .card_container .cards .cards_body .cards_image img {
+  border-radius: 7px;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#main .page .card_container .cards .cards_body .cards_shows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 20px;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#main .page .card_container .cards .cards_body .cards_shows p {
+  margin-bottom: 0;
+  padding: 0 10px 0 0;
+  border-right: 1px solid #fff;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 1px;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#main .page .card_container .cards .cards_body .cards_content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  z-index: 2;
+}
+#main .page .card_container .cards .cards_body .cards_content h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+#main .page .card_container .cards .cards_body .cards_content h2 span {
+  font-weight: 800;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  padding: 2px;
+  margin-right: 0.5rem;
+}
+#main .page .card_container .cards .cards_title {
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+}
+#main .page .card_container .cards .cards_title h4 {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+#main .page.is-active {
+  display: block;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+#contact {
+  padding-top: 3rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  background: #0e1111;
+}
+#contact .contact_content {
+  margin-bottom: 3rem;
+}
+#contact .contact_content .title {
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#contact .contact_content .contact_Section {
+  margin-bottom: 2rem;
+}
+#contact .contact_content .contact_Section hr {
+  margin-bottom: 1.2rem;
+  background: #999;
+}
+#contact .contact_content .contact_Section .info {
+  display: flex;
+  align-items: flex-start;
+  max-width: 370px;
+  margin: 0 auto;
+  gap: 20px;
+}
+#contact .contact_content .contact_Section .info .icon i {
+  font-size: 2.3rem;
+  color: #f01452;
+}
+#contact .contact_content .contact_Section .info .icon.phone i {
+  transform: rotate(87deg);
+}
+#contact .contact_content .contact_Section .info .description {
+  text-align: left;
+}
+#contact .contact_content .contact_Section .info .description h5 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  transform: skew(0);
+  display: inline-block;
+  vertical-align: middle;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform-origin: 0 100%;
+}
+#contact .contact_content .contact_Section .info .description h5:hover {
+  transform: skew(-10deg);
+}
+#contact .contact_content .contact_Section .info .description p {
+  color: #999;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+}
+#contact .contact_content .contact_forms {
+  max-width: 550px;
+  margin: 0 auto;
+}
+#contact .contact_content .contact_forms .titles h2 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#contact .contact_content .contact_forms .forms form .input_contents legend {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group {
+  background: #303841;
+  border-radius: 7px;
+  border: none;
+  border: 2px solid #303841;
+  transition: 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group:focus-within {
+  border-color: #f01452;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .input-group-prepend .input-group-text {
+  border: none;
+  background: transparent;
+  height: 100%;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .input-group-prepend .input-group-text.phone i {
+  transform: rotate(85deg);
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .input-group-prepend .input-group-text i {
+  color: #ccc;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .form-control {
+  background: transparent;
+  color: #ccc;
+  border: 2px solid #303841;
+  border-left: 0 none;
+  transition: 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .form-control::placeholder {
+  color: #687179;
+  font-weight: 600;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group .form-control:focus {
+  box-shadow: none;
+}
+#contact .contact_content .contact_forms .forms form .input_contents .input-group textarea {
+  resize: none;
+}
+#contact .contact_content .contact_forms .forms form .input_contents:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#contact .contact_content .contact_forms .forms form .buttons {
+  width: 100%;
+  height: 50px;
+}
+#contact .contact_content .contact_forms .forms form .buttons button {
+  width: 100%;
+  height: 100%;
+  background: #f01452;
+  color: #fff;
+  border-radius: 7px;
+  padding: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  line-height: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#contact .contact_content .contact_forms .forms form .buttons button:active {
+  position: relative;
+  top: 2px;
+}
+
+#moviesDetails .banner {
+  height: 380px;
+}
+#moviesDetails .moviesContent {
+  height: 100%;
+}
+#moviesDetails .moviesContent .titles {
+  margin: 3.5rem 0;
+}
+#moviesDetails .moviesContent .titles h1 {
+  font-size: 2.5rem;
+}
+#moviesDetails .moviesContent .titles h4 {
+  font-size: 1.5rem;
+}
+#moviesDetails .moviesContent .titles h1, #moviesDetails .moviesContent .titles h4 {
+  font-weight: 700;
+}
+#moviesDetails .moviesContent .moviesBottomContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+}
+#moviesDetails .moviesContent .moviesBottomContent .one, #moviesDetails .moviesContent .moviesBottomContent .two, #moviesDetails .moviesContent .moviesBottomContent .three {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideImages {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideImages .images {
+  height: 500px !important;
+}
+#moviesDetails .moviesContent .moviesBottomContent .rightSideVideo video {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn {
+  color: #fff;
+  background-color: #f01452;
+  border-color: #f01452;
+  padding: 0.575rem;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  animation: pulse 2s infinite;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  position: relative;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn:focus {
+  box-shadow: none;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn img {
+  width: 30px;
+  height: 100%;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn:before {
+  content: "";
+  position: absolute;
+  border: #f01452 solid 8px;
+  border-radius: 0.25rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: mv-play-eff 2s infinite;
+}
+#moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn:hover:before, #moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn:focus:before, #moviesDetails .moviesContent .moviesBottomContent .leftSideButton a.playBtn:active:before {
+  animation: mv-play-eff 2s infinite;
+}
+#moviesDetails .moviesContent .moviesBottomContent .rightSideMovieSmallDescription {
+  display: flex;
+  align-items: center;
+}
+#moviesDetails .moviesContent .moviesBottomContent .rightSideMovieSmallDescription .description {
+  width: 100%;
+  height: 100%;
+}
+#moviesDetails .moviesContent .moviesBottomContent .rightSideMovieSmallDescription .description p {
+  color: #fff;
+  font-family: "Inconsolata", monospace;
+}
+#moviesDetails .moviesContent .moviesBottomContent .mainDescrip {
+  list-style: none;
+}
+#moviesDetails .moviesContent .moviesBottomContent .mainDescrip li {
+  color: #fff;
+  margin: 10px 0;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 0.5px;
+}
+#moviesDetails .moviesContent .moviesBottomContent .left {
+  width: 30%;
+}
+#moviesDetails .moviesContent .moviesBottomContent .right {
+  width: 70%;
+}
+#moviesDetails .moviesContent .moviesBottomContent #popular_movies {
+  padding: 0;
+  background: #0e1111;
+}
+#moviesDetails .moviesContent .moviesBottomContent #popular_movies #swiper1 .swiper-slide {
+  width: 150px;
+  height: max-content;
+}
+#moviesDetails .moviesContent .moviesBottomContent #popular_movies #swiper1 .swiper-slide h4 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background: #0e1111;
+  display: none;
+}
+#preloader .loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f01452;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f01452;
+    border-left-color: transparent;
+  }
+}
+#VideoPlayer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+}
+#VideoPlayer .mainWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#VideoPlayer .mainWrapper .popupContent {
+  position: relative;
+  height: 370px;
+  width: 500px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+#VideoPlayer .mainWrapper .popupContent video {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#VideoPlayer .mainWrapper .popupContent video:focus-visible {
+  outline: none;
+}
+#VideoPlayer .mainWrapper .popupContent #closeTrailer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #f01452;
+  color: #fff;
+  border-radius: 0 10px 0 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+#VideoPlayer .mainWrapper #overlay_2 {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  top: 0;
+  position: fixed;
+  transform: translateX(0%);
+  z-index: 9998;
+}
+
+#main .page .card_container .cards .cards_body .cards_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#threeHunderedBanner .banner_content,
+#tarzanBanner .banner_content,
+#lionKingBanner .banner_content, #oscarReward, #oscarReward .container {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1038px) {
+  #mainSlider .swiper-slide .content {
+    text-align: center;
+    width: 80%;
+    padding-left: 0;
+  }
+
+  #tarzanBanner .banner_content .content_body,
+#lionKingBanner .banner_content .content_body {
+    max-width: 80%;
+  }
+
+  #main .card_container .cards {
+    width: auto;
+  }
+
+  #navbar #btn_menu {
+    margin-left: 0;
+  }
+  #navbar #btn_menu .btn_menu .sidebar_content {
+    left: 20px;
+  }
+
+  #moviesDetails .moviesContent .moviesBottomContent .left {
+    width: 40%;
+  }
+  #moviesDetails .moviesContent .moviesBottomContent .right {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #navbar {
+    width: 0;
+    padding: 0;
+  }
+  #navbar .navbar_logo {
+    display: none;
+  }
+  #navbar #toplogocontainer {
+    position: fixed;
+    z-index: 99995;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+  }
+  #navbar #btn_menu .btn_menu {
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 45px;
+    background: #0e1111;
+  }
+  #navbar #btn_menu .btn_menu .btn-menu-trigger {
+    position: fixed;
+    z-index: 99888;
+    left: 0px;
+    bottom: 0px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .main_container {
+    margin-left: 0;
+  }
+
+  #mainSlider .swiper-button-prev {
+    left: 10px;
+  }
+
+  #tarzanBanner .banner_content .content_body .card-description,
+#lionKingBanner .banner_content .content_body .card-description {
+    font-size: 1rem;
+  }
+
+  #contact .contact_content .contact_Section .info .description h5 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 756px) {
+  #navbar #btn_menu.active {
+    border-left-width: 300px;
+  }
+  #navbar #btn_menu .btn_menu .sidebar_content li.links a {
+    font-size: 1.3rem;
+  }
+
+  #mainSlider .swiper-slide .content a .title {
+    font-size: 2.5em;
+  }
+  #mainSlider .swiper-slide .content .caption {
+    font-size: 1rem;
+  }
+
+  #threeHunderedBanner,
+#tarzanBanner,
+#lionKingBanner {
+    background-position: center;
+  }
+  #threeHunderedBanner .banner_content .content_body,
+#tarzanBanner .banner_content .content_body,
+#lionKingBanner .banner_content .content_body {
+    top: 60%;
+  }
+  #threeHunderedBanner .banner_content .content_body h1,
+#tarzanBanner .banner_content .content_body h1,
+#lionKingBanner .banner_content .content_body h1 {
+    font-size: 2rem;
+  }
+  #threeHunderedBanner .banner_content .content_body p.card-description,
+#tarzanBanner .banner_content .content_body p.card-description,
+#lionKingBanner .banner_content .content_body p.card-description {
+    font-size: 1rem;
+  }
+
+  #oscarReward .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #oscarReward .container h3 a {
+    font-size: 1.5rem;
+  }
+  #oscarReward .container p {
+    font-size: 0.9rem;
+  }
+  #oscarReward .container .author span {
+    font-size: 0.8rem;
+  }
+
+  #contact .contact_content .contact_Section .info {
+    max-width: 100%;
+    text-align: left;
+  }
+  #contact .contact_content .contact_Section .info .description h5 {
+    font-size: 1.5rem;
+  }
+
+  #main .card_container .cards {
+    height: 240px !important;
+  }
+
+  #moviesDetails .banner {
+    background-attachment: inherit !important;
+  }
+  #moviesDetails .moviesContent .moviesBottomContent .left {
+    width: 100%;
+  }
+  #moviesDetails .moviesContent .moviesBottomContent .right {
+    width: 100%;
+  }
+  #moviesDetails .moviesContent .moviesBottomContent .one, #moviesDetails .moviesContent .moviesBottomContent .two, #moviesDetails .moviesContent .moviesBottomContent .three {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #mainSlider .swiper-button-white {
+    top: 45%;
+    padding: 20px;
+  }
+  #mainSlider .swiper-button-white:after {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  #mainSlider .swiper-slide .content a .title {
+    font-size: 2em;
+  }
+  #mainSlider .swiper-slide .content .caption {
+    font-size: 0.8rem;
+  }
+
+  #oscarReward .container h3 a {
+    font-size: 1.3rem;
+  }
+
+  #threeHunderedBanner:after,
+#tarzanBanner:after,
+#lionKingBanner:after {
+    background: rgba(14, 17, 17, 0.4);
+  }
+  #threeHunderedBanner .banner_content .content_body,
+#tarzanBanner .banner_content .content_body,
+#lionKingBanner .banner_content .content_body {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+  #threeHunderedBanner .banner_content .content_body h1,
+#tarzanBanner .banner_content .content_body h1,
+#lionKingBanner .banner_content .content_body h1 {
+    font-size: 1.6rem;
+  }
+  #threeHunderedBanner .banner_content .content_body h6,
+#tarzanBanner .banner_content .content_body h6,
+#lionKingBanner .banner_content .content_body h6 {
+    font-size: 0.9rem;
+  }
+  #threeHunderedBanner .banner_content .content_body p.card-description,
+#tarzanBanner .banner_content .content_body p.card-description,
+#lionKingBanner .banner_content .content_body p.card-description {
+    font-size: 0.8rem;
+  }
+
+  #movies .banner_filter {
+    background-position: right;
+  }
+
+  #contact .contact_content .contact_Section .info {
+    max-width: 100%;
+    text-align: left;
+  }
+  #contact .contact_content .contact_Section .info .description h5 {
+    font-size: 1.3rem;
+  }
+  #contact .contact_content .contact_Section .info .description p {
+    font-size: 15px;
+  }
+  #contact .contact_content .contact_Section .info .icon i {
+    font-size: 1.7rem;
+  }
+
+  #lionkingVideoPlayer .popupContent {
+    width: 300px;
+    height: 300px;
+  }
+}

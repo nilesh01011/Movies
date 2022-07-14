@@ -1,0 +1,49 @@
+$border_color:#0e1111;
+$background_color: #131822;
+$logo: #f01452;
+$white: #fff;
+$RGBA_06: rgba(0, 0, 0, 0.6);
+$RGBA_05: rgba(0, 0, 0, 0.5);
+$RGBA_04: rgba(0, 0, 0, 0.4);
+$RGBA_03: rgba(0, 0, 0, 0.3);
+$RGBA_02: rgba(0, 0, 0, 0.2);
+$RGBA_01: rgba(0, 0, 0, 0.1);
+$BoxShadow_5_10: 0 5px 10px;
+$BoxShadow_2_4: 0 2px 4px;
+$BoxShadow_2_6: 0 2px 6px;
+$BoxShadow_6_12: 0 6px 12px;
+$BoxShadow_04: 0 0 4px;
+$BoxShadow_03: 0 0 3px;
+$BoxShadow_02: 0 0 2px;
+$BoxShadow_01: 0 0 1px;
+$trasition_05:all 0.5s ease-in-out;
+$trasition_03:all 0.3s ease-in-out;
+$padding: 3rem;
+$border_radius: 20px;
+$CategoryCards: 0.5s 1s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+$CubicBerier: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+$CardsTransition_1: 1s $CubicBerier;
+$CardsTransition_06: 0.6s $CubicBerier;
+$CardsTransition_05: 0.5s $CubicBerier;
+$CardsTransition_04: 0.4s $CubicBerier;
+$CardsTransition_03: 0.3s $CubicBerier;
+$CardsTransition_02: 0.2s $CubicBerier;
+$CardsTransition_01: 0.1s $CubicBerier;
+$margin_Top: 0.8rem;
+
+%AllImagesContain {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+%AllImagesCover {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+%WidthHeight {
+    height: 100%;
+    width: 100%;
+}
